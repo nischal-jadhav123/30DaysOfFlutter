@@ -18,18 +18,6 @@ class HomePage extends StatelessWidget {
               ),
             ),
       drawer: Drawer(),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'School',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
-        ],
-      ),
     );
   }
 }
