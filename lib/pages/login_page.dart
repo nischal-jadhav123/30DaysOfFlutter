@@ -19,6 +19,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         changeButton = true;
       });
+
       await Future.delayed(Duration(seconds: 1));
       // ignore: use_build_context_synchronously
       Navigator.pushNamed(context, MyRoutes.homeRoute);
