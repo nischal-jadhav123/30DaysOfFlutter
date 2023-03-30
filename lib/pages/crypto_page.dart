@@ -23,7 +23,7 @@ class _CryptoAppState extends State<CryptoApp> {
 
   loadData() async {
     const String uri =
-        "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50";
+        "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=5y&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50";
     const Map<String, String> _headers = {
       "X-RapidAPI-Key": "d6fd486e6cmshad7dfb0b6fe2ba2p1a1182jsn52ccf720e943",
       "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",

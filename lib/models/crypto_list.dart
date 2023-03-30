@@ -15,7 +15,6 @@ class Crypto_List {
   final String marketCap;
   final String price;
   final String btcPrice;
-  final String change;
   final num rank;
   final List<dynamic> sparkline;
   final String coinrankingUrl;
@@ -28,7 +27,6 @@ class Crypto_List {
     required this.marketCap,
     required this.price,
     required this.btcPrice,
-    required this.change,
     required this.rank,
     required this.sparkline,
     required this.coinrankingUrl,
@@ -42,7 +40,6 @@ class Crypto_List {
     String? marketCap,
     String? price,
     String? btcPrice,
-    String? change,
     num? rank,
     List<dynamic>? sparkline,
     String? coinrankingUrl,
@@ -55,7 +52,6 @@ class Crypto_List {
       marketCap: marketCap ?? this.marketCap,
       price: price ?? this.price,
       btcPrice: btcPrice ?? this.btcPrice,
-      change: change ?? this.change,
       rank: rank ?? this.rank,
       sparkline: sparkline ?? this.sparkline,
       coinrankingUrl: coinrankingUrl ?? this.coinrankingUrl,
@@ -71,7 +67,6 @@ class Crypto_List {
       'marketCap': marketCap,
       'price': price,
       'btcPrice': btcPrice,
-      'change': change,
       'rank': rank,
       'sparkline': sparkline,
       'coinrankingUrl': coinrankingUrl,
@@ -87,7 +82,6 @@ class Crypto_List {
       marketCap: map['marketCap'] as String,
       price: map['price'] as String,
       btcPrice: map['btcPrice'] as String,
-      change: map['change'] as String,
       rank: map['rank'] as num,
       sparkline: List<dynamic>.from((map['sparkline'] as List<dynamic>)),
       coinrankingUrl: map['coinrankingUrl'] as String,
@@ -101,7 +95,7 @@ class Crypto_List {
 
   @override
   String toString() {
-    return 'Crypto_List(uuid: $uuid, symbol: $symbol, name: $name, iconUrl: $iconUrl, marketCap: $marketCap, price: $price, btcPrice: $btcPrice, change: $change, rank: $rank, sparkline: $sparkline, coinrankingUrl: $coinrankingUrl)';
+    return 'Crypto_List(uuid: $uuid, symbol: $symbol, name: $name, iconUrl: $iconUrl, marketCap: $marketCap, price: $price, btcPrice: $btcPrice, rank: $rank, sparkline: $sparkline, coinrankingUrl: $coinrankingUrl)';
   }
 
   @override
@@ -115,7 +109,6 @@ class Crypto_List {
         other.marketCap == marketCap &&
         other.price == price &&
         other.btcPrice == btcPrice &&
-        other.change == change &&
         other.rank == rank &&
         listEquals(other.sparkline, sparkline) &&
         other.coinrankingUrl == coinrankingUrl;
@@ -130,7 +123,6 @@ class Crypto_List {
         marketCap.hashCode ^
         price.hashCode ^
         btcPrice.hashCode ^
-        change.hashCode ^
         rank.hashCode ^
         sparkline.hashCode ^
         coinrankingUrl.hashCode;
